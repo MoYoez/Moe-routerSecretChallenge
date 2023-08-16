@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func end(w http.ResponseWriter, r *http.Request) {
+func Ends(w http.ResponseWriter, r *http.Request) {
 	queryParams := r.URL.Query()
 	key := queryParams.Get("toolkit")
 	w.Header().Set("tips", "Tips can be used one more time.")
