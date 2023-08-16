@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func timeHandler(w http.ResponseWriter, r *http.Request) {
+func Time(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("tips", "Always Reverse")
 	w.WriteHeader(http.StatusCreated)
 	w.Header().Set("Content-Type", "application/json")
