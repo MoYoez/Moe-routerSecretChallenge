@@ -19,13 +19,13 @@ func Times(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "You Entered in a wrong way, maybe You should consider more ^^")
 		return
 	}
-	if r.Method != http.MethodPost {
-		fmt.Fprintf(w, "Data Always Reverse,isn't it?")
-		return
-	}
 	ToInt64,err := strconv.ParseInt(timeUnixStr, 10, 64)
 	if err != nil {
 		fmt.Fprintf(w, "You Entered in a wrong way, maybe You should consider more ^^")
+		return
+	}
+	if r.Method != http.MethodPost {
+		fmt.Fprintf(w, "Data Always Reverse,isn't it?")
 		return
 	}
 	oneHourAgo := currentTime - 3600
